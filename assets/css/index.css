@@ -1,0 +1,410 @@
+:root {
+    --color--btn: rgba(193, 15, 238, 0.854); /*color texto opciones del menu*/
+    --color--button:rgba(15, 34, 238, 0.854); /*color para botones*/
+    --color-primay: #c500d6; /*opcion activa en menu*/
+    --color-secondary: #24203b;
+    --color--logo:#6a5acd; /*Color del logo*/
+    --bg: #03171d; /* color texto de botones*/
+    --text: #rgb(123, 104, 142); /*color subtitulos h2*/
+    --color--parrafo:#fff;/*color parrafos y texto*/
+    --body-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  /*.dark {
+    --bg: #222;
+    --text: #f0f0f0;
+  }*/
+  
+  html {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: var(--body-font);
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+    
+  /*body {
+    background-image: url(/assets/img/fondo-lineas-dinamicas-estilo-papel_23-2149008629.avif);
+    background-repeat: no-repeat;
+    color: var(--text);
+    margin: 0;
+  }*/
+
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  button {
+    background: transparent;
+    border: none;
+    color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-image: url(/assets/img/fondo-3d-cubos-blancos_23-2150472987.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+   /*background-color: var(--color-secondary);
+    backdrop-filter: blur(10px); */
+    z-index: 100;
+  }
+  .header i {
+    font-size: 28px;
+  }
+  .he__nav {
+    max-width: 1024px;
+    margin: auto;
+    padding: 20px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav__logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--color--logo);
+  }
+  .menu{
+    display: flex;
+  }
+  .link__menu{
+    color: var(--color--btn);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+.link__menu.active{
+  color: var(--color-primay);
+}
+.menu-item:hover{
+  background-color: rgba(0, 0, 255, 0.274);
+  border-radius: 10%;
+}
+
+
+  .principal, .about, .portafolio{
+    width: 100%;
+    height: 100vh;
+    background: url(/assets/img/fondo-lineas-dinamicas-estilo-papel_23-2149008629.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  /* Utils */
+  .section {
+    padding:60px 0px;
+  }
+  
+  .title{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    /*text-align: center;
+    color: rebeccapurple;
+    font-weight: 700;*/
+  }
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+  .frase{
+    color:var(--color--parrafo);
+    font-size: 20px;
+    font-weight: 800;
+    /*font-style: italic;*/
+    font-family: monospace;
+  }
+  h2{
+    text-align: center;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 16px;
+  }
+  
+
+  @media (max-width: 767px) {
+    .nav__centro{
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 75%;
+      height: 100vh;
+      padding: 20px;
+      background-color: var(--color-secondary);
+      box-shadow: -7px 1px 42px 1px #0000005e;
+      transition: left .3s ease-in-out;
+    }
+    .menu {
+        margin-top: 40px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .link__menu{
+        color: var(--color--btn);
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .boton--close{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: var(--color--btn);
+     }
+   }
+   .show--menu {
+      left: 0;
+    }
+    .principal{
+      padding-top: 20px;
+      min-height: 100vh;
+      color: var(--color--parrafo);
+      background-color: var(--color-secondary);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .principal .container{
+        width: 90%;
+    }
+    .titleprincipal {    
+       /*margin: 0 0 10px;*/
+       text-align: center;
+    }
+    .hv{
+      max-width: 150px;
+      max-height: 40px;
+      margin: 0 auto;
+      padding: 10px 15px;
+      font-size: 15px;
+      border-radius: 3px 3px 15px 3px;
+      background-color: var(--bg);
+      text-transform: uppercase;
+      font-weight: 700;
+      font-style: italic;
+      
+       
+    }
+    .saludo{
+        margin: 0 0 10px;
+        font-size: 22px;
+      }
+    .saludo span{
+        margin-top: 100px;
+      }
+    .principal__image {
+        width: 100px;
+        height: 100px;
+        border-radius: 3px 3px 30px 3px;
+        margin: 40px auto;
+        /*margin-bottom: 30px;
+        margin-top: 30px;
+        margin-left:70px;*/
+        overflow: hidden;
+        box-shadow: 5px 5px 0 1px var(--color-secondary), 10px 10px 0 1px #fff;
+        
+      }
+      .principal__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transform: scale(1);
+        transition: transform .2s ease-in-out;
+      }
+      .principal__image:hover img {
+        transform: scale(1.1);
+      }
+      .portafolio{
+        padding-top: 80px;
+        min-height: 100vh;
+      }
+      .portafolio .container{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        padding:40px;
+      }
+      .portafolio__logo img{
+        width: 70px;
+        height: 70px;
+        border: 5px solid rgb(30, 18, 1);
+        border-radius: 0 3px 25px 0px;
+        object-fit: cover;
+      }
+      .portafolio__logo{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-columns: minmax(100px, auto);
+        align-content:start;
+        justify-content: start;
+        align-items: center;
+        justify-items: center;
+        gap: 5px 5px;
+       
+      }
+      .herramienta{
+        font-size: 18px;
+      }
+      .about{
+        padding-top: 70px;
+        min-height: 100vh;
+      }
+      .contacto{
+        margin: 0 auto;
+        min-height: 100vh;
+        padding-top:30px;
+        background-color: #222;
+      }
+      .title__contacto{
+        font-size: 30px;
+        color: var(--color--parrafo);
+      }
+      .subtitulo__contacto{
+        font-size: 20px;
+        color: var(--color--parrafo);
+      }
+      .label__input {
+        background-color: #dfdfdf;
+        border-radius: 3px 3px 15px 3px;
+        padding: 15px 10px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      
+      .label__input input {
+        background-color: #dfdfdf;
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: 5px;
+      }
+      
+      .contact__form textarea {
+        background-color: #dfdfdf;
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: 20px;
+        resize: none;
+        margin-bottom: 20px;
+      }
+      
+     .contact__btn {
+        margin:0 auto;
+        padding: 10px 18px;
+        font-size: 18px;
+        font-weight: 800;
+        border-radius: 3px 3px 15px 3px;
+        background-color: var(--color--button);
+        text-transform: uppercase;
+      }   
+      .progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 5px;
+        background-color: rgb(77, 7, 12);/*var(--color-primay);*/
+        z-index: 101;
+        
+      }
+      .message--success {
+        background-color: rgb(205 236 197);
+        color: rgb(88 140 74);
+        padding: 10px;
+        display: inline-block;
+      }
+      
+      .message--error {
+        background-color: rgb(255 205 205);
+        color: rgb(140 74 74);
+        padding: 10px;
+        display: inline-block;
+      }
+      
+      .message--success.hidden,
+      .message--error.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+      @media (min-width: 767px) {
+        .boton--close{
+          display: none;
+        }
+        .btn--open{
+          visibility: hidden;
+        }
+        .he__nav{
+          height: 80px;
+        }
+        .menu{
+          gap: 20px;
+        }
+        h1{
+          font-size: 30px;
+        }
+        .saludo{
+          font-size: 20px;
+        }
+        .parrafo{
+          font-size: 18px;
+        }
+        /*.portafolio__logo img{
+          width: 100px;
+          height: 100px;
+        }*/
+        .herramienta{
+          font-size: 18px;
+        }
+        .principal__image{
+          width: 150px;
+          height: 150px;
+        }
+        .container{
+          margin: o auto;
+          padding-top: 20px;
+        }
+        .contacto .container{
+          width: 70%;
+        }
+      }
+      /*/* Desktops */
+      @media (min-width: 1024px) {
+       
+      }*/
+      
+      
+      
+    
